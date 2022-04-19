@@ -1,0 +1,11 @@
+ TryHackMe: Vulversity
+
+In this room I learned some basic things about recon,web app attacks and priviledge escalation.
+
+Task 1 [Deploy the machine]
+
+In the first task you need to connect and deploy the machine
+
+Task 2 [Reconnaisance]
+
+This task is all about learning basic stuff about recon using nmap. Run the command "nmap -sV -A 10.10.205.97" to check the open port numbers, the version of the squid proxy, the operating system of this machine and the port this web server is running.
