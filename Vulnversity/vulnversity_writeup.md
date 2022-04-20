@@ -1,4 +1,4 @@
- # TryHackMe: Vulversity
+# TryHackMe: Vulversity
 
 In this room I learned some basic things about recon,web app attacks and priviledge escalation.
 
