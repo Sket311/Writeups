@@ -1,12 +1,12 @@
- **TryHackMe: Vulversity**
+ # TryHackMe: Vulversity
 
 In this room I learned some basic things about recon,web app attacks and priviledge escalation.
 
-**Task 1 [Deploy the machine]**
+## Task 1 [Deploy the machine]
 
 In the first task you need to connect and deploy the machine
 
-**Task 2 [Reconnaisance]**
+## Task 2 [Reconnaisance]
 
 This task is all about learning basic stuff about recon using nmap. Run the command "nmap -sV -A 10.10.205.97" to check the open port numbers, the version of the squid proxy, the operating system of this machine and the port this web server is running.
 
@@ -14,8 +14,8 @@ This task is all about learning basic stuff about recon using nmap. Run the comm
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsoa_1m7k32IwZ6QoAqqJXfbE5Tt1EPMH7GyPMQwV6eQoBoRo-BBB03pKbSgmhTJrDKV39WuCJOPIlfuDN2ayAs59UZLnZZJHT_EZzxveTkbKYlPLCLTWllzNfcDKRM615NtAaqUo1YenRBRzDQ4Cg7yeZ3htZy4YcrRm6KMdchaHGbxnEh6w1BJIRqQ/w431-h343/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-18,%2012.08.35%20%CF%80%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
 
+**Questions**
   
-
 **Scan the box, how many ports are open?**
 
 6
@@ -46,7 +46,7 @@ Ubuntu
 
   
 
-**Task 3[Locating directories using GoBuster]**
+## Task 3[Locating directories using GoBuster]
 
   
 
@@ -56,13 +56,7 @@ This task is all about learning the basic usage of gobuster which is a tool used
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijf61toH2gVQCtNBl8JE9kvvCTu9O0G1SRGtAr_wG78o61aiNWkMAF5CULmrIXfiNsTNLBbDNHsOFF4fLFE7RRM7m5otmfFR3dMqw_yDIo1WGI3R1VZ71tyrky3Arqq3j3jHngBh89wvRtplsiQezfFoK-prD4gKuMGixvGLyOA2O64BMLLOjK0_mUVw/w387-h304/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-17,%208.52.14%20%CE%BC%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
 
-  
-
-  
-
-  
-
-**[Task 4] Compromise the webserver**
+## [Task 4] Compromise the webserver
 
   
 
@@ -120,11 +114,7 @@ Then after going in the home directory I found a directory called bill which is 
 
 Finally in the bill directory was the user.txt file which contained the flag for Task 4.
 
-  
-
-ivilege Escalation Privilege Escalati
-
-  
+**Questions**
 
 **What is the name of the user who manages the webserver?**
 
@@ -158,7 +148,7 @@ The I run the above script the above script and after this the command "bash -p"
 
 The final step to get the flag is run the commanc "cat /root/root.txt" to get the flags needed to complete this task
 
-  
+**Questions**
 
 **On the system,search for all SUID files. What file stands out?**
 
