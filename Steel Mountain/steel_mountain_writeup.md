@@ -21,7 +21,8 @@ The right click on the page and view the page source.In the img html element you
 <img width="649" alt="3" src="https://user-images.githubusercontent.com/28839345/164236973-2256fa56-c7cf-4d81-b150-888bda9f029e.png">
 
 **Questions**
-**1. Who is the employee of the month?**
+
+**Who is the employee of the month?**
 
 Bill Harper
 
@@ -107,8 +108,6 @@ Upload PowerUp.ps1 to the windows machine.To do this run the command "upload /ro
 
 <img width="878" alt="11" src="https://user-images.githubusercontent.com/28839345/164237004-32c989f8-c843-43ca-b07f-d3a43cb58334.png">
 
-
-
 Step 3.
 
 Type `load powershell` in your meterpreter.
@@ -171,9 +170,10 @@ The last step is to find the flag of the root which is located in the directory 
 <img width="489" alt="18" src="https://user-images.githubusercontent.com/28839345/164237022-7ad4c92e-bf8c-455c-8f18-37eb1bd96bc1.png">
 
 <img width="456" alt="19" src="https://user-images.githubusercontent.com/28839345/164237024-87068b0c-7f60-459c-a587-ed6ea4b2eb5a.png">
+
 **Questions**
 
-**1. Take close attention to the CanRestart option that is set to true. What is the name of the service which shows up as an unquoted service path vulnerability?**
+**Take close attention to the CanRestart option that is set to true. What is the name of the service which shows up as an unquoted service path vulnerability?**
 
 `AdvancedSystemCareService9`
 
