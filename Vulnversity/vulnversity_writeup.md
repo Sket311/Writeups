@@ -44,61 +44,34 @@ Ubuntu
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIsiotPNXVXsKaKAq2eyRcDMshrwAX44Upy5K5PFUZjTL3uEcVVhtkzJc9Ogf0CjaOeFKiIuXiYVGRvGhyXndgmMk5XIyEACAG9c1QRjBwp6FpVD_A80ErYJ3XA_5uSm6Dk4OKjsN-on4v129E33nicHNPnnjlU3Gw1_xggZQM5UJMFhvG185_q55VKQ/w320-h12/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-17,%208.43.46%20%CE%BC%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
 
-  
-
 ## Task 3[Locating directories using GoBuster]
 
-  
-
 This task is all about learning the basic usage of gobuster which is a tool used to brute-force URIs.Run the command "gobuster dir -u http:10.10.205.97:3333 -w /usr/share/wordlists/dirb/common.txt" to find the directory that has an upload form page.
-
   
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijf61toH2gVQCtNBl8JE9kvvCTu9O0G1SRGtAr_wG78o61aiNWkMAF5CULmrIXfiNsTNLBbDNHsOFF4fLFE7RRM7m5otmfFR3dMqw_yDIo1WGI3R1VZ71tyrky3Arqq3j3jHngBh89wvRtplsiQezfFoK-prD4gKuMGixvGLyOA2O64BMLLOjK0_mUVw/w387-h304/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-17,%208.52.14%20%CE%BC%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
 
 ## [Task 4] Compromise the webserver
 
-  
-
 To answer the first question of this task I tried to upload a php file in the form and got a message 'Extension not allowed'.
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjf6exOlgOsCSDFnL4YEDPI3Od1DOQwPjDnbgdEAGOWTF4TADWp6mWv7gdVQ-OowH5cK5KSaZman9tVl1-BFBQTGOtKwZKE0_IbZV0o_aZz7LiXUAXe4ObEzS8vxyJG-aQb2WIqZXpeTkkJ_orf0nWseAcSiV6GyqiW_teUkkh-19gtcDSNMmfETG5ydg/w357-h76/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-17,%2010.57.42%20%CE%BC%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
 
-  
-
 After this I discovered that the files with .php extension were being blocked so I used burp suite to find what extension was not being filtered.After I created the list of .php,.php3,.php4,.php5 and .phtml files ,I used this file in combination with intruder to check what extension was not filtered.
-
-  
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOphcUYDu-TkVKnpwwyur5tTEEnCgXNEbILRHi5LtdQRBNuCgpOHJmx1iy18KSIQfVxUBkjG-T9ROg7IQohfoCYRt2Qjr8oYWvgAmr0clOY0Am6ZCg2WrRsFCbPCIM53nuEA7mARL9kMcBuBYkBaxqRYqUJ89PwQte9LiToJuqTkvXHB9vjdc7woQh5w/w635-h285/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-17,%2011.00.14%20%CE%BC%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghiBnxeXh173zrrTB0ojAfRVBmh3aU4Lir0QCfZUGDnhgC_nJdIl3euO9uxV2BD6n6hRJJpgnpILdyHo0X3g3ThEbupmxV865hH3sPmlcWkkFQJOhpRunBa8U24mtHewmg5TZhYbmSMe_tEybs_TNhvntrrf4Cp0yjt-N1cWDSVHvS2_XGCUCJXmds6A/w825-h23/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-17,%2011.00.49%20%CE%BC%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
 
-  
-
-  
-
 The output of the sniper attack was the following 
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimPg-97LG8k_zlK3GSl-g8u4UDPy7tuxEwLBpcdTxDqjOD4O1G2l-dZ_G2lcAAyVeiSO0_mIpGmvUt9KV4eqQWiz820BpBfv4zK3TUwXmiQsQIHLRk65CQmHvwlRxHKGAOWk3LWqbhcX_9KTPRIrmvM4x-DLHYXOQ9XHnHYTL76CZtHF_VLYY3XtV81g/w735-h147/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-17,%2011.01.52%20%CE%BC%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
-
-  
-
-  
-
-  
-
-  
-
-  
 
 As we can see there is no difference beetween different php extensions on the Length so I tried manually using burp to change the file extension.
 
 After changing the filename parameter to "file.phtml" I found that the php extension that is not filtered is the ".phtml".
 
 [![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjScZEfGazC8sVi3pFLzyPbjYdUgrS44iA6AAqdMVHKNNoZqC9_0IxVshFCe9Si1MrFrZd3gWDgbK09MDS-X0N_-5RaVwdIu3r-h7DgqcWJtFF0S952j4LvmpYir2bD92Tp81s0ydAPmowsKBT99TVY160VNZsyc5rTB6SLH7v4c5xTmYz6o5llz-jgA/w1077-h37/%CE%A3%CF%84%CE%B9%CE%B3%CE%BC%CE%B9%CE%BF%CC%81%CF%84%CF%85%CF%80%CE%BF%202022-04-17,%2011.03.30%20%CE%BC%CE%BC.png)](https://www.blogger.com/blog/page/edit/6040287426171712342/4409551937287025563#)
-
-  
 
 Then I used the script mentioned in tryhackme to create reverse_shell.I changed the ip parameter to local host ip and port number to 4444 and uploaded the file on the site.Then I run netcat on my local machine "nc -nlvp 4444" and clicked on the uploaded php file on the web server to create a reverse backdoor.
 
@@ -119,8 +92,6 @@ Finally in the bill directory was the user.txt file which contained the flag for
 **What is the name of the user who manages the webserver?**
 
 bill
-
-  
 
 **[Task 5] Priviledge Escalation**
 
